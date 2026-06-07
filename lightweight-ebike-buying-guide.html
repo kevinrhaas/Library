@@ -14,7 +14,7 @@
     --ink:#1c1815;
     --ink-soft:#54493e;
     --line:#c9bca6;
-    --accent:#df5117;       /* electric orange — nod to the showroom Velotric */
+    --accent:#df5117;
     --accent-deep:#b13c0e;
     --s-low:#b0492f;
     --s-mid:#c5912f;
@@ -35,34 +35,25 @@
       radial-gradient(circle at 88% 92%, rgba(44,102,70,.06), transparent 42%);
   }
   .grain{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:9999;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");}
   .wrap{max-width:1080px;margin:0 auto}
-
-  /* MASTHEAD */
   .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent-deep);font-weight:600}
   h1{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(34px,7vw,68px);line-height:.96;letter-spacing:-.01em;margin:.18em 0 .12em}
   h1 em{font-style:italic;color:var(--accent)}
   .dek{font-size:clamp(15px,2.4vw,19px);color:var(--ink-soft);max-width:60ch}
   .rule{height:2px;background:var(--ink);margin:22px 0 18px}
   .rule.thin{height:1px;background:var(--line)}
-
   .meta{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-soft)}
   .chip{border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--paper-2);white-space:nowrap}
   .chip b{color:var(--ink)}
   .chip.hot{border-color:var(--accent);color:var(--accent-deep)}
-
-  /* SECTION HEADS */
   .sec{margin-top:42px}
   .sec-h{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(20px,3.4vw,28px);letter-spacing:-.01em;display:flex;align-items:baseline;gap:12px}
   .sec-h .no{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--accent);font-weight:600;letter-spacing:.1em}
   .sec-sub{color:var(--ink-soft);font-size:14.5px;margin-top:6px;max-width:72ch}
-
-  /* WEIGHTING LEGEND */
   .weights{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   .wbadge{font-family:"IBM Plex Mono",monospace;font-size:11.5px;border:1px solid var(--line);background:var(--paper-2);border-radius:6px;padding:6px 9px;display:flex;gap:7px;align-items:center}
   .wbadge .x{color:var(--accent-deep);font-weight:600}
-
-  /* MATRIX */
   .scroll{overflow-x:auto;margin-top:18px;border:1px solid var(--line);border-radius:12px;background:#fbf6ec}
   table{border-collapse:collapse;width:100%;min-width:760px;font-size:13px}
   th,td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--line)}
@@ -77,9 +68,6 @@
   .bar > i{display:block;height:100%}
   tr.ob td,tr.ob th{opacity:.72}
   tr.ob th small{color:var(--accent-deep)}
-  .lemark{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-soft);margin-top:4px}
-
-  /* CARDS */
   .cards{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
   @media(min-width:780px){.cards{grid-template-columns:1fr 1fr}}
   .card{border:1px solid var(--line);border-radius:14px;background:#fbf6ec;padding:20px 20px 18px;position:relative;overflow:hidden}
@@ -90,7 +78,6 @@
   .tagline{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-deep);margin-top:3px}
   .specrow{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
   .spec{font-family:"IBM Plex Mono",monospace;font-size:11px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
-  .spec b{color:var(--ink)}
   .fitline{display:flex;align-items:center;gap:10px;margin-bottom:14px}
   .fitline .big{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:26px;letter-spacing:-.02em}
   .fitline .lab{font-size:11px;color:var(--ink-soft);line-height:1.25}
@@ -111,8 +98,6 @@
   .links a:hover{background:var(--ink);color:var(--paper)}
   .links a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
   .links a.solid:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
-
-  /* RECO */
   .reco{margin-top:42px;border:2px solid var(--ink);border-radius:16px;background:var(--ink);color:var(--paper);padding:clamp(20px,4vw,34px)}
   .reco .kicker{color:var(--accent)}
   .reco h2{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(24px,4.5vw,40px);line-height:1.02;margin:.2em 0 .35em}
@@ -127,24 +112,16 @@
   .pick h4{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin:4px 0 8px}
   .pick p{font-size:13.5px;color:#ddd2c1;margin-bottom:0}
   .footnote{margin-top:24px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);line-height:1.7}
-
-  @media print{
-    body{background:#fff;padding:0}
-    .grain{display:none}
-    .card,.scroll{break-inside:avoid}
-    .links{display:none}
-  }
+  @media print{body{background:#fff;padding:0}.grain{display:none}.card,.scroll{break-inside:avoid}.links{display:none}}
 </style>
 </head>
 <body>
 <div class="grain"></div>
 <div class="wrap">
-
-  <!-- MASTHEAD -->
   <header>
     <div class="kicker">E-Bike Buying Guide · The Lightweight Commuter Class</div>
     <h1>Light, torque-true,<br>and <em>under $1,750</em>.</h1>
-    <p class="dek">Seven of the best stealth city e-bikes that ride like a real bike — scored on the full 0–10 scale (no participation 8s), then weighted to your priorities. Built off a Trek FX3 sensibility: natural power, easy to lift, easy to live with.</p>
+    <p class="dek">Seven of the best stealth city e-bikes that ride like a real bike — scored on the full 0–10 scale and weighted to your priorities.</p>
     <div class="rule"></div>
     <div class="meta">
       <span class="chip">Compiled <b>Jun 2026</b></span>
@@ -154,11 +131,9 @@
       <span class="chip">Haul · <b>Kuat Sherpa</b></span>
     </div>
   </header>
-
-  <!-- HOW SCORED -->
   <section class="sec">
     <div class="sec-h"><span class="no">01</span> How the scores are weighted</div>
-    <p class="sec-sub">Every bike is rated 0–10 in eight technical categories. The <b>Fit Score</b> (out of 100) weights only the six things you ranked — so the bike that wins isn't the most loaded, it's the one that's most <em>you</em>. Hill Power and Components are shown for context but not weighted (Chicago is flat).</p>
+    <p class="sec-sub">Every bike is rated 0–10 in eight technical categories. The <b>Fit Score</b> weights only the six things you ranked.</p>
     <div class="weights">
       <span class="wbadge"><span class="x">×6</span> Ride feel (torque)</span>
       <span class="wbadge"><span class="x">×5</span> Weight / portability</span>
@@ -168,8 +143,6 @@
       <span class="wbadge"><span class="x">×1</span> Tech / anti-theft</span>
     </div>
   </section>
-
-  <!-- MATRIX -->
   <section class="sec">
     <div class="sec-h"><span class="no">02</span> The rating chart</div>
     <p class="sec-sub">Swipe sideways on mobile. Dashed = above your budget, shown for contrast.</p>
@@ -193,98 +166,82 @@
       </table>
     </div>
   </section>
-
-  <!-- CARDS -->
   <section class="sec">
     <div class="sec-h"><span class="no">03</span> The contenders, in detail</div>
     <p class="sec-sub">Ranked by Fit Score. Each card links to live specs and the manufacturer.</p>
     <div class="cards" id="cards"></div>
   </section>
-
-  <!-- RECO -->
   <section class="reco">
     <div class="kicker">The Verdict</div>
     <h2>Two bikes are basically tied — <em>and that's the answer.</em></h2>
-    <p>Your weighting put the <strong>Aventon Soltera 3 ADV (81)</strong> and the <strong>Ride1Up Roadster V3 (80)</strong> a single point apart, with the Velotric and Tenways right behind at 79. That's a real tie — so the decision comes down to one fork in the road: do you want the <em>absolute lightest, cleanest grab-and-go</em>, or <em>more bike for less money with room to grow?</em></p>
+    <p>Your weighting put the <strong>Aventon Soltera 3 ADV (81)</strong> and the <strong>Ride1Up Roadster V3 (80)</strong> a single point apart.</p>
     <div class="twin">
       <div class="pick primary">
         <div class="tag">★ Best overall pick</div>
         <h4>Ride1Up Roadster V3 — belt single-speed</h4>
-        <p>The torque sensor is rated among the best hub-motor pairings at any price, it has the most power and real-world range headroom in the class, and the belt config lands ~39–40 lb with near-zero maintenance — covering your top four priorities at once. And it's the cheapest of the finalists at $1,295. If you ever want gears or a throttle, the same frame offers both. This is the smart-money bike.</p>
+        <p>The torque sensor is among the best hub-motor pairings in this class, with strong power and range while staying relatively light.</p>
       </div>
       <div class="pick">
         <div class="tag">Co-pick · if lightness wins</div>
         <h4>Aventon Soltera 3 ADV</h4>
-        <p>The one to buy if "I want to carry it up stairs and never touch the drivetrain" is the whole point. Lightest here at 37 lb, Gates belt, genuinely sweet torque sensor that out-climbed the heavier Soltera, plus integrated turn signals. You pay $200 more and give up power/range headroom and any gearing — fine on flat Chicago streets, limiting if you ever leave them.</p>
+        <p>The one to buy if low weight and low maintenance are the priority: 37 lb, Gates belt, and clean city-bike behavior.</p>
       </div>
     </div>
-    <p style="margin-top:18px"><strong>Tie-breaker:</strong> test-ride both before buying. The Roadster's 45c Schwalbe gravel tires + slightly more power make it the more confident all-rounder; the Soltera feels more like a fast road bike with a quiet boost. Given your FX3 background, I'd bet on the Roadster — but the Soltera is the more elegant object.</p>
+    <p style="margin-top:18px"><strong>Tie-breaker:</strong> test-ride both before buying.</p>
   </section>
-
   <p class="footnote">
     Scoring: 0–10 per category, used across the full range. Fit /100 = (6·RideFeel + 5·Weight + 4·Range + 3·Value + 2·Maint + 1·Tech) ÷ 2.1.<br>
-    Figures are real-world tested where available (range, weight). Prices are base MSRP, Jun 2026, and shift with frequent sales — verify before buying.<br>
-    Lectric ONE and Trek FX+ 2 sit above your $1,750 ceiling and are included only to show the tradeoffs (heavy/cadence vs. premium-but-pricey).
+    Figures are real-world tested where available. Prices are base MSRP, June 2026, and may change.<br>
+    Lectric ONE and Trek FX+ 2 sit above the $1,750 ceiling and are included only to show the tradeoffs.
   </p>
-
 </div>
-
 <script>
 const W = {rf:6,wt:5,rg:4,vl:3,lm:2,tc:1};
 function band(s){return s<=3?'var(--s-low)':s<=6?'var(--s-mid)':s<=8?'var(--s-good)':'var(--s-top)';}
-
 const bikes=[
  {name:"Aventon Soltera 3 ADV",tag:"Lightest · belt · turn signals",price:"$1,499",wt:"37 lb",fit:81,ob:false,win:false,
   s:{rf:8,wt:9,rg:8,vl:7,lm:9,tc:7,hill:5,parts:8},
   specs:["250W / 40Nm","Gates belt SS","367Wh","Class 1","Tektro hyd. 180mm","4 sizes"],
-  win:"37 lb is the lightest mainstream e-bike here, and the belt drive means literally zero drivetrain upkeep. Torque sensor out-climbed the heavier Soltera 2.5 despite a smaller motor. Integrated turn signals + 4 frame sizes.",
-  lose:"Single-speed and the smallest motor (250W) — fine on flat streets, weak on real hills. Battery is non-removable (charge on-bike only).",
+  win:"37 lb and very low-maintenance belt drive.",
+  lose:"Single-speed and smaller motor; battery is non-removable.",
   links:[["Aventon — specs","https://www.aventon.com/products/soltera-3-ebike",true],["EBR review","https://electricbikereview.com/aventon/solterra-3-adv-review/",false]]},
-
  {name:"Ride1Up Roadster V3",tag:"Best value · most headroom",price:"$1,295",wt:"39–44 lb",fit:80,ob:false,win:true,
   s:{rf:9,wt:7,rg:8,vl:9,lm:8,tc:4,hill:8,parts:8},
   specs:["500W / 50Nm","belt SS or 9–10sp","360Wh","Class 2/3 · throttle","Tektro hyd.","Schwalbe 45c"],
-  win:"MIVICE motor + Intui-Drive torque sensor rated one of the best hub pairings tested — \"feels like your legs got upgraded.\" Most power & real range (tested 49.9 mi). Belt OR geared, step-thru/high-step, optional suspension. Cheapest finalist.",
-  lose:"No app, no GPS / theft tracking — just a compact display + a basic thumb throttle. Heaviest in the geared config (~44 lb); pick the belt to keep it ~39–40 lb.",
+  win:"Excellent torque feel, strong power, and standout value.",
+  lose:"Minimal tech; geared configuration is heavier.",
   links:[["Ride1Up","https://ride1up.com",true],["99 Spokes — specs","https://99spokes.com/bikes/ride1up/2026/roadster-v3",false]]},
-
  {name:"Velotric T1 ST Plus",tag:"Range king · best tech",price:"$1,299",wt:"39–44 lb",fit:79,ob:false,win:false,
   s:{rf:8,wt:7,rg:10,vl:8,lm:5,tc:9,hill:5,parts:7},
   specs:["350W / 40Nm","8sp Shimano","352.8Wh","Class 1/3 · no throttle","Apple Find My","color display"],
-  win:"Best range in the class by a mile — beat its 70-mi claim, hit 84.6 mi at PAS1 in testing. Apple Find My + app + GPS tracking + bright color display is the best tech package here, at the lowest finalist price.",
-  lose:"Chain drive (more upkeep than the belt bikes). Lower-powered motor with no throttle — hills take real leg effort. No fenders/rack included.",
+  win:"Huge range and best tech package here.",
+  lose:"Chain drive and modest climbing power.",
   links:[["Velotric — specs","https://www.velotricbike.com/products/velotric-t1st-ebike",true],["EBR review","https://electricbikereport.com/velotric-t1-st-review/",false]]},
-
  {name:"Tenways CGO600 Pro",tag:"Best ride feel · pick belt or gears",price:"$1,499",wt:"37–41 lb",fit:79,ob:false,win:false,
   s:{rf:9,wt:8,rg:7,vl:7,lm:9,tc:5,hill:6,parts:7},
-  specs:["350W / 45Nm","belt SS or 8sp (same $)","~360Wh","Class 1 · no throttle","fenders+lights incl","removable batt."],
-  win:"A double-sided \"true torque\" sensor reviewers call the most honest in the class — near-silent, hard to fool. You choose Gates belt OR 8-speed at the same price. Fenders, lights, kickstand included. \"Feels like a $2,000 bike.\"",
-  lose:"Only a basic mono-LED display and no GPS/theft tech. Advertised 37 lb runs closer to 41 lb with fenders. Single-speed limits steep climbs (geared option helps).",
-  links:[["EBR review","https://electricbikereview.com/tenways/cgo600-pro-c-review/",true],["Electrek review","https://electrek.co/2024/07/25/the-latest-belt-drive-single-speed-electric-bike-storming-the-bike-lane-tenways-cgo600-pro/",false]]},
-
+  specs:["350W / 45Nm","belt SS or 8sp","~360Wh","Class 1 · no throttle","fenders+lights incl","removable batt."],
+  win:"Very natural torque response and flexible drivetrain choice.",
+  lose:"Basic display and limited theft tech.",
+  links:[["EBR review","https://electricbikereview.com/tenways/cgo600-pro-c-review/",true],["Electrek review","https://electrek.co/2024/07/25/the-latest-belt-drive-single-speed-electric-bike-storming-the-us/",false]]},
  {name:"Aventon Soltera 2.5",tag:"Most features per dollar",price:"$1,199",wt:"41–43 lb",fit:68,ob:false,win:false,
   s:{rf:6,wt:6,rg:8,vl:9,lm:5,tc:7,hill:6,parts:7},
   specs:["350W","7sp chain","360Wh","Class 2/3 · throttle","turn signals","4 sizes"],
-  win:"The flexibility play: torque sensor AND a throttle AND 7 gears AND turn signals AND 4 sizes, for the lowest price here (often discounted to ~$999). The do-a-bit-of-everything option.",
-  lose:"Heaviest of the light group and the motor reads mild. Chain drive, and it's the previous-gen ride feel — the 3 ADV is the sharper bike if you don't need gears/throttle.",
+  win:"Lots of features for the money.",
+  lose:"Heavier and less refined than the newer 3 ADV.",
   links:[["Aventon","https://www.aventon.com/products/soltera-3-ebike",true],["Tom's Guide review","https://www.tomsguide.com/reviews/aventon-soltera-2",false]]},
-
  {name:"Lectric ONE",tag:"Over budget · power & gearbox",price:"$1,999",wt:"55–63 lb",fit:54,ob:true,win:false,
   s:{rf:5,wt:2,rg:7,vl:7,lm:9,tc:6,hill:9,parts:8},
   specs:["750W / 85Nm","Pinion 6sp + belt","499/672Wh","Class 1/2/3 · throttle","cadence (96-mag)","1 size"],
-  win:"Wild tech for the money — a sealed Pinion gearbox with electronic auto-shift + Gates belt + 750W. Easily the best climber and lowest-maintenance drivetrain of the whole set.",
-  lose:"Two dealbreakers against your priorities: it's a cadence sensor (not the natural torque feel you ranked #1) and it's 55–63 lb — brutal to carry or rack. Also over budget.",
+  win:"Big climbing power and exceptionally low-maintenance drivetrain.",
+  lose:"Too heavy, cadence-based, and over budget for this use case.",
   links:[["Lectric — specs","https://lectricebikes.com/products/lectric-one-long-range-ebike",true],["EBR review","https://electricbikereview.com/lectric-ebikes/lectric-one-review/",false]]},
-
  {name:"Trek FX+ 2",tag:"Over budget · the FX, electrified",price:"$2,399",wt:"40 lb",fit:56,ob:true,win:false,
   s:{rf:8,wt:7,rg:3,vl:3,lm:5,tc:3,hill:5,parts:8},
   specs:["250W / 40Nm","9sp Altus","250Wh","Class 1 · no throttle","rack+fenders incl","no display"],
-  win:"The literal e-version of your FX3 — same Trek feel, excellent natural torque assist, dealer support, commuter kit included. If brand loyalty and a familiar ride matter, this is it.",
-  lose:"Tiny 250Wh battery = only ~35 mi (extender costs extra). No display, no removable battery, no app. At $2,399 reviewers call it hard to justify vs. cheaper rivals. Worst value here.",
+  win:"Closest analog-bike feel and strong dealer support.",
+  lose:"Small battery and poor value versus rivals.",
   links:[["99 Spokes — specs","https://99spokes.com/bikes/trek/2023/fxplus-2",true],["EBR review","https://electricbikereport.com/trek-fx-plus-2-review/",false]]},
 ];
-
-/* ---- build matrix ---- */
 const order=[...bikes].sort((a,b)=>b.fit-a.fit);
 const mbody=document.getElementById('mbody');
 const cats=[['rf'],['wt'],['rg'],['vl'],['lm'],['tc'],['hill'],['parts']];
@@ -298,8 +255,6 @@ order.forEach(b=>{
   cells+=`<td class="fit" style="color:${band(b.fit/10)}">${b.fit}</td>`;
   tr.innerHTML=cells; mbody.appendChild(tr);
 });
-
-/* ---- build cards ---- */
 const labels={rf:["Ride feel","×6"],wt:["Weight / port.","×5"],rg:["Range","×4"],vl:["Value","×3"],lm:["Low maint.","×2"],tc:["Tech / theft","×1"],hill:["Hill power",""],parts:["Components",""]};
 const cardWrap=document.getElementById('cards');
 order.forEach((b,i)=>{
